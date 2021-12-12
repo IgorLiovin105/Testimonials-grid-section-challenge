@@ -161,8 +161,8 @@ input:focus {
   margin-bottom: 20px;
   -webkit-animation-name: userAnim;
           animation-name: userAnim;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
 }
