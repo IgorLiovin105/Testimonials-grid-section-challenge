@@ -117,14 +117,6 @@ input:focus {
   -ms-grid-rows: 1fr;
   -ms-grid-columns: 1fr minmax(auto, 1130px) 1fr;
       grid-template: 1fr/1fr minmax(auto, 1130px) 1fr;
-  -webkit-animation-name: anim;
-          animation-name: anim;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 
 .grid__body {
@@ -139,14 +131,6 @@ input:focus {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  -webkit-animation-name: anim;
-          animation-name: anim;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 
 .grid__item {
@@ -157,14 +141,6 @@ input:focus {
 .grid__item p {
   opacity: 0.5;
   margin-top: 15px;
-  -webkit-animation-name: anim;
-          animation-name: anim;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 
 .user {
@@ -175,14 +151,6 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  -webkit-animation-name: anim;
-          animation-name: anim;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
 }
 
 .user__icon {
@@ -201,24 +169,6 @@ input:focus {
 
 .user__name span {
   opacity: 0.5;
-}
-
-@-webkit-keyframes anim {
-  0% {
-    margin-left: -100%;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@keyframes anim {
-  0% {
-    margin-left: -100%;
-  }
-  100% {
-    margin-left: 0;
-  }
 }
 
 .daniel {
@@ -262,12 +212,24 @@ input:focus {
   margin-top: 25px;
 }
 
+.grid__item h2,
+.grid__item p {
+  opacity: 0;
+  -webkit-transition: all 2s ease 0s;
+  transition: all 2s ease 0s;
+}
+
+.grid__item:hover h2,
+.grid__item:hover p {
+  opacity: 1;
+}
+
 @media (max-width: 1200px) {
   .grid__body {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: repeat 3, 1fr;
-        grid-template-rows: repeat 3, 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
   }
   .daniel,
   .patrick {
@@ -284,5 +246,9 @@ input:focus {
         grid-template-columns: 1fr;
     -ms-grid-rows: (auto)[6];
         grid-template-rows: repeat(6, auto);
+  }
+  .grid__item h2,
+  .grid__item p {
+    opacity: 1;
   }
 }

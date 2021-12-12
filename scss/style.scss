@@ -25,10 +25,6 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     justify-content: center;
     align-items: center;
     grid-template: 1fr / 1fr minmax(auto, 1130px) 1fr;
-    animation-name: anim;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
 }
 .grid__body {
     padding: 20px;
@@ -37,10 +33,6 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    animation-name: anim;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
 }
 
 .grid__item {
@@ -49,10 +41,6 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     & p {
         opacity: 0.5;
         margin-top: 15px;
-        animation-name: anim;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
-        animation-delay: 0s;
     }
 }
 
@@ -60,10 +48,6 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    animation-name: anim;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-duration: 3s;
     &__icon {
         width: 40px;
         height: 40px;
@@ -81,14 +65,8 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     }
 }
 
-@keyframes anim {
-    0% {
-        margin-left: -100%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
+
+
 
 .daniel {
     grid-column: span 2;
@@ -128,10 +106,26 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     }
 }
 
+.grid__item {
+    & h2,
+    & p {
+        opacity: 0;
+        transition: all 2s ease 0s;
+    }
+}
+.grid__item {
+    &:hover {
+        & h2,
+        & p {
+            opacity: 1;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .grid__body {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat (3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
     .daniel,
     .patrick {
@@ -147,5 +141,11 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     .grid__body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
+    }
+    .grid__item {
+        & h2,
+        & p {
+            opacity: 1;
+        }
     }
 }
