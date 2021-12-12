@@ -41,6 +41,10 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     & p {
         opacity: 0.5;
         margin-top: 15px;
+        animation-name: textAnim;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
     }
 }
 
@@ -49,8 +53,8 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     align-items: center;
     margin-bottom: 20px;
     animation-name: userAnim;
+    animation-delay: 0;
     animation-duration: 3s;
-    animation-iteration-count: 99999999;
     &__icon {
         width: 40px;
         height: 40px;
@@ -70,13 +74,19 @@ $ff: 'Barlow Semi Condensed', sans-serif;
 
 @keyframes userAnim {
     0% {
-        margin-left: 0;
-    }
-    50% {
-        margin-left: 10px;
+        margin-left: -100%;
     }
     100% {
         margin-left: 0;
+    }
+}
+
+@keyframes textAnim {
+    0% {
+        margin-bottom: -100%;
+    }
+    100% {
+        margin-bottom: 0;
     }
 }
 

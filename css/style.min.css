@@ -141,6 +141,14 @@ input:focus {
 .grid__item p {
   opacity: 0.5;
   margin-top: 15px;
+  -webkit-animation-name: textAnim;
+          animation-name: textAnim;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .user {
@@ -153,10 +161,10 @@ input:focus {
   margin-bottom: 20px;
   -webkit-animation-name: userAnim;
           animation-name: userAnim;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  -webkit-animation-iteration-count: 99999999;
-          animation-iteration-count: 99999999;
 }
 
 .user__icon {
@@ -179,10 +187,7 @@ input:focus {
 
 @-webkit-keyframes userAnim {
   0% {
-    margin-left: 0;
-  }
-  50% {
-    margin-left: 10px;
+    margin-left: -100%;
   }
   100% {
     margin-left: 0;
@@ -191,13 +196,28 @@ input:focus {
 
 @keyframes userAnim {
   0% {
-    margin-left: 0;
-  }
-  50% {
-    margin-left: 10px;
+    margin-left: -100%;
   }
   100% {
     margin-left: 0;
+  }
+}
+
+@-webkit-keyframes textAnim {
+  0% {
+    margin-bottom: -100%;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes textAnim {
+  0% {
+    margin-bottom: -100%;
+  }
+  100% {
+    margin-bottom: 0;
   }
 }
 
