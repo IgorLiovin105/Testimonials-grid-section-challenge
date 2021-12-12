@@ -3,12 +3,15 @@
 
 // vars
 
+// Primary bg
 $moderate-wiolet: #7541c8;
 $very-dark-grayish-bue: #48556a;
 $very-dark-blackish-bue: #19212e;
 $white: #fff;
+// Neutral bg
 $light-grey: #cfcfcf;
 $light-grayish-bue: #ecf2f8;
+// fonts
 $fz: 13px;
 $ff: 'Barlow Semi Condensed', sans-serif;
 
@@ -16,16 +19,90 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     width: 100%;
     min-height: 100vh;
     background: $light-grayish-bue;
-}
-
-.grid__body {
+    font-family: $ff;
+    font-size: $fz;
     display: grid;
-    grid-template-columns: 
-        [start] 2fr 1fr 1fr [row2]
-        [row2] 1fr 2fr 1fr [row-end];
-    
+    justify-content: center;
+    align-items: center;
+    grid-template: 1fr / 1fr minmax(auto, 1130px) 1fr;
+}
+.grid__body {
+    padding: 20px;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .grid__item {
-    background: $light-grey;
+    color: $white;
+    border-radius: 10px;
+    & p {
+        opacity: 0.5;
+        margin-top: 15px;
+    }
+}
+
+
+.daniel {
+    grid-column: span 2;
+    background: $moderate-wiolet;
+    &__bg {
+        background: url("../img/bg-pattern-quotation.svg") top right 50px no-repeat;
+    }
+    &__icon {
+        border: 2px solid $light-grey;
+    }
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.jonathan {
+    background:$very-dark-grayish-bue;
+}
+
+.jeanette {
+    background:$white;
+    color: $very-dark-blackish-bue;
+}
+
+.patrick {
+    grid-column: span 2;
+    background:$very-dark-blackish-bue;
+}
+
+.kira {
+    grid-row: span 2;
+    background:$white;
+    color: $very-dark-blackish-bue;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        border-radius: 50%;
+        & img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__name span {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid__body {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (6, 1fr);
+    }
 }

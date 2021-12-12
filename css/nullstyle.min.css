@@ -99,20 +99,3 @@ input:focus {
     scroll-behavior: auto !important;
   }
 }
-
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  background: #ecf2f8;
-}
-
-.grid__body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: [start] 2fr 1fr 1fr [row2] [row2] 1fr 2fr 1fr [row-end];
-      grid-template-columns: [start] 2fr 1fr 1fr [row2] [row2] 1fr 2fr 1fr [row-end];
-}
-
-.grid__item {
-  background: #cfcfcf;
-}
