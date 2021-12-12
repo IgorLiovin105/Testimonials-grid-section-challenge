@@ -25,6 +25,10 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     justify-content: center;
     align-items: center;
     grid-template: 1fr / 1fr minmax(auto, 1130px) 1fr;
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
 }
 .grid__body {
     padding: 20px;
@@ -33,6 +37,10 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
 }
 
 .grid__item {
@@ -41,7 +49,7 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     & p {
         opacity: 0.5;
         margin-top: 15px;
-        animation-name: textAnim;
+        animation-name: anim;
         animation-duration: 3s;
         animation-iteration-count: 1;
         animation-delay: 0s;
@@ -52,8 +60,9 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    animation-name: userAnim;
+    animation-name: anim;
     animation-delay: 0s;
+    animation-iteration-count: 1;
     animation-duration: 3s;
     &__icon {
         width: 40px;
@@ -72,16 +81,7 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     }
 }
 
-@keyframes userAnim {
-    0% {
-        margin-left: -100%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
-
-@keyframes textAnim {
+@keyframes anim {
     0% {
         margin-left: -100%;
     }

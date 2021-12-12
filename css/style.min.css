@@ -117,6 +117,14 @@ input:focus {
   -ms-grid-rows: 1fr;
   -ms-grid-columns: 1fr minmax(auto, 1130px) 1fr;
       grid-template: 1fr/1fr minmax(auto, 1130px) 1fr;
+  -webkit-animation-name: anim;
+          animation-name: anim;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .grid__body {
@@ -131,6 +139,14 @@ input:focus {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  -webkit-animation-name: anim;
+          animation-name: anim;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .grid__item {
@@ -141,8 +157,8 @@ input:focus {
 .grid__item p {
   opacity: 0.5;
   margin-top: 15px;
-  -webkit-animation-name: textAnim;
-          animation-name: textAnim;
+  -webkit-animation-name: anim;
+          animation-name: anim;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
@@ -159,10 +175,12 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  -webkit-animation-name: userAnim;
-          animation-name: userAnim;
+  -webkit-animation-name: anim;
+          animation-name: anim;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
 }
@@ -185,7 +203,7 @@ input:focus {
   opacity: 0.5;
 }
 
-@-webkit-keyframes userAnim {
+@-webkit-keyframes anim {
   0% {
     margin-left: -100%;
   }
@@ -194,25 +212,7 @@ input:focus {
   }
 }
 
-@keyframes userAnim {
-  0% {
-    margin-left: -100%;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@-webkit-keyframes textAnim {
-  0% {
-    margin-left: -100%;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@keyframes textAnim {
+@keyframes anim {
   0% {
     margin-left: -100%;
   }
