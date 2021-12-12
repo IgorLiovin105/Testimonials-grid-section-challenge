@@ -48,6 +48,9 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    animation-name: userAnim;
+    animation-duration: 3s;
+    animation-iteration-count: 99999999;
     &__icon {
         width: 40px;
         height: 40px;
@@ -62,6 +65,18 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     }
     &__name span {
         opacity: 0.5;
+    }
+}
+
+@keyframes userAnim {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 10px;
+    }
+    100% {
+        margin-left: 0;
     }
 }
 

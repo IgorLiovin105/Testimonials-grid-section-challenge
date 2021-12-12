@@ -151,6 +151,12 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  -webkit-animation-name: userAnim;
+          animation-name: userAnim;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 99999999;
+          animation-iteration-count: 99999999;
 }
 
 .user__icon {
@@ -169,6 +175,30 @@ input:focus {
 
 .user__name span {
   opacity: 0.5;
+}
+
+@-webkit-keyframes userAnim {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes userAnim {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 0;
+  }
 }
 
 .daniel {
