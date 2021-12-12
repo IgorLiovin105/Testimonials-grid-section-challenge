@@ -44,6 +44,26 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     }
 }
 
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        border-radius: 50%;
+        border: 2px solid $light-grey;
+        & img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__name span {
+        opacity: 0.5;
+    }
+}
 
 .daniel {
     grid-column: span 2;
@@ -51,13 +71,10 @@ $ff: 'Barlow Semi Condensed', sans-serif;
     &__bg {
         background: url("../img/bg-pattern-quotation.svg") top right 50px no-repeat;
     }
-    &__icon {
-        border: 2px solid $light-grey;
-    }
 }
 
-.p-30 {
-    padding: 30px;
+.p-20 {
+    padding: 20px 35px;
 }
 
 .jonathan {
@@ -72,37 +89,38 @@ $ff: 'Barlow Semi Condensed', sans-serif;
 .patrick {
     grid-column: span 2;
     background:$very-dark-blackish-bue;
+    &__icon {
+        border: 2px solid $moderate-wiolet;
+    }
 }
 
 .kira {
     grid-row: span 2;
     background:$white;
     color: $very-dark-blackish-bue;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    &__icon {
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
-        border-radius: 50%;
-        & img {
-            border-radius: 50%;
-            height: 100%;
-            width: 100%;
-        }
-    }
-    &__name span {
-        opacity: 0.5;
+    & p {
+        margin-top: 25px;
     }
 }
 
 @media (max-width: 1200px) {
     .grid__body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat (3, 1fr);
+    }
+    .daniel,
+    .patrick {
+        grid-column: span 1;
+    }
+
+    .kira {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid__body {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat (6, 1fr);
+        grid-template-rows: repeat(6, auto);
     }
 }
