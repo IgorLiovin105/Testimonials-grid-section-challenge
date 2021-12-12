@@ -1,0 +1,31 @@
+// import nullstyle
+@import "nullstyle";
+
+// vars
+
+$moderate-wiolet: #7541c8;
+$very-dark-grayish-bue: #48556a;
+$very-dark-blackish-bue: #19212e;
+$white: #fff;
+$light-grey: #cfcfcf;
+$light-grayish-bue: #ecf2f8;
+$fz: 13px;
+$ff: 'Barlow Semi Condensed', sans-serif;
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: $light-grayish-bue;
+}
+
+.grid__body {
+    display: grid;
+    grid-template-columns: 
+        [start] 2fr 1fr 1fr [row2]
+        [row2] 1fr 2fr 1fr [row-end];
+    
+}
+
+.grid__item {
+    background: $light-grey;
+}
