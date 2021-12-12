@@ -212,6 +212,20 @@ input:focus {
   margin-top: 25px;
 }
 
+.grid__item {
+  position: relative;
+}
+
+.grid__item h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 2s ease 0s;
+  transition: all 2s ease 0s;
+}
+
 .grid__item h2,
 .grid__item p {
   opacity: 0;
@@ -222,6 +236,10 @@ input:focus {
 .grid__item:hover h2,
 .grid__item:hover p {
   opacity: 1;
+}
+
+.grid__item:hover h1 {
+  opacity: 0;
 }
 
 @media (max-width: 1200px) {
@@ -250,5 +268,8 @@ input:focus {
   .grid__item h2,
   .grid__item p {
     opacity: 1;
+  }
+  .grid__item h1 {
+    opacity: 0;
   }
 }
